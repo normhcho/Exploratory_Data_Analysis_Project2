@@ -4,9 +4,9 @@ setwd("C:/Users/norma_000/Desktop/nc/R/CourseraFiles")
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
-## loading the necessary packages
-> library(dplyr)
-> library(ggplot2)
+## loading some possible packages
+library(dplyr)
+library(ggplot2)
 
 ## head(), dim(), str(), summary() of the data, only for Part I
 
@@ -54,7 +54,7 @@ summary(NEI)
 ## summing the emissions by year
 sumpm25 <- with(NEI, aggregate(NEI$Emissions, by = list(year), sum))
 
-## graph using plot from the base plotting system
+## dot/line graph using plot from the base plotting system
 plot(sumpm25, type="o", lwd=3, main="Total PM25 Emissions from 1999, 2002, 2005, and 2008",
      xlab = "Year", ylab = "Tons", pch=10)
 
