@@ -3,7 +3,6 @@ NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
 ## loading the necessary packages
-library(dplyr)
 library(ggplot2)
 
 ## merging the NEI and SCC files by SCC
